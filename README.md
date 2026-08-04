@@ -59,7 +59,8 @@ The system combines Artificial Intelligence, Embedded Systems, Computer Vision, 
 - [Installation](#-installation)
 - [Results](#-results)
 - [Future Enhancements](#-future-enhancements)
-- [Author](#-https://github.com/Sriraamkarthick/AI-Smart-Surveillance-Robot#%E2%80%8D-author)
+- [Author](#-author)
+
 # ✨ Key Features
 
 - 🤖 Real-time Object Detection using YOLOv8
@@ -106,7 +107,7 @@ The system combines Artificial Intelligence, Embedded Systems, Computer Vision, 
 
 ---
 
-# 🏗️ System Architecture
+## 🏗️ System Architecture
 
 ```mermaid
 flowchart TD

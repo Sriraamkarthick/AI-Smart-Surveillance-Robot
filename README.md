@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="screenshots/banner.png" width="100%" alt="AI Smart Surveillance Robot">
+</p>
+
 # 🤖 AI-Powered Smart Surveillance Robot
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
@@ -11,6 +15,19 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black?logo=flask)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-green)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-red?logo=opencv)
+![ESP32-CAM](https://img.shields.io/badge/ESP32--CAM-IoT-orange)
+![MQTT](https://img.shields.io/badge/MQTT-Protocol-purple)
+![Arduino](https://img.shields.io/badge/Arduino-IDE-00979D?logo=arduino)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+</p>
+
 > **An AI-powered surveillance robot capable of real-time object detection, live video streaming, remote control, and responsive web monitoring using ESP32-CAM, Flask, and YOLOv8.**
 
 ---
@@ -22,6 +39,21 @@ The **AI-Powered Smart Surveillance Robot** is an intelligent robotic system dev
 The system combines Artificial Intelligence, Embedded Systems, Computer Vision, and IoT technologies into a single surveillance platform.
 
 ---
+
+## 📊 Project Information
+
+| Category | Details |
+|----------|---------|
+| Project Type | AI + IoT + Robotics |
+| AI Model | YOLOv8 |
+| Backend | Flask |
+| Frontend | HTML, CSS, JavaScript |
+| Communication | MQTT |
+| Camera | ESP32-CAM |
+| Controller | NodeMCU ESP8266 |
+| Motor Driver | L298N |
+| Supported Devices | Desktop & Mobile |
+| Programming Languages | Python, C++, JavaScript |
 
 # 📑 Table of Contents
 
@@ -83,34 +115,21 @@ The system combines Artificial Intelligence, Embedded Systems, Computer Vision, 
 
 ---
 
-# 🏗 System Architecture
+## 🏗️ System Architecture
 
+```mermaid
+flowchart TD
+    A[ESP32-CAM] --> B[Wi-Fi Network]
+    B --> C[Flask Web Server]
+    C --> D[YOLOv8 Object Detection]
+    C --> E[Responsive Web Dashboard]
+    E --> F[MQTT Communication]
+    F --> G[NodeMCU ESP8266]
+    G --> H[L298N Motor Driver]
+    H --> I[4WD Robot]
+    G --> J[LED Control]
+    C --> K[Image Capture]
 ```
-ESP32-CAM
-      │
-      ▼
- Wi-Fi Network
-      │
-      ▼
- Flask Web Server
-      │
-      ▼
- YOLOv8 Object Detection
-      │
-      ▼
- MQTT Communication
-      │
-      ▼
- NodeMCU ESP8266
-      │
-      ▼
- L298N Motor Driver
-      │
-      ▼
- Robot Movement
-```
-
----
 
 # 📱 Responsive Dashboard
 

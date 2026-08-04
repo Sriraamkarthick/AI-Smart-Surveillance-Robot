@@ -59,8 +59,7 @@ The system combines Artificial Intelligence, Embedded Systems, Computer Vision, 
 - [Installation](#-installation)
 - [Results](#-results)
 - [Future Enhancements](#-future-enhancements)
-- [Author](#-author)
-
+- [Author](#-%E2%80%8D-author)
 # ✨ Key Features
 
 - 🤖 Real-time Object Detection using YOLOv8

@@ -1,5 +1,16 @@
 # 🤖 AI-Powered Smart Surveillance Robot
 
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black?logo=flask)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-Object%20Detection-success)
+![ESP32-CAM](https://img.shields.io/badge/ESP32--CAM-IoT-orange)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-red?logo=opencv)
+![MQTT](https://img.shields.io/badge/MQTT-IoT-purple)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 > **An AI-powered surveillance robot capable of real-time object detection, live video streaming, remote control, and responsive web monitoring using ESP32-CAM, Flask, and YOLOv8.**
 
 ---
@@ -11,6 +22,22 @@ The **AI-Powered Smart Surveillance Robot** is an intelligent robotic system dev
 The system combines Artificial Intelligence, Embedded Systems, Computer Vision, and IoT technologies into a single surveillance platform.
 
 ---
+
+# 📑 Table of Contents
+
+- [Overview](#-overview)
+- [Features](#-key-features)
+- [Hardware Used](#-hardware-used)
+- [Software Stack](#-software-stack)
+- [System Architecture](#-system-architecture)
+- [Responsive Dashboard](#-responsive-dashboard)
+- [Project Gallery](#-project-gallery)
+- [Demonstration](#-demonstration)
+- [Project Structure](#-project-structure)
+- [Installation](#-installation)
+- [Results](#-results)
+- [Future Enhancements](#-future-enhancements)
+- [Author](#-author)
 
 # ✨ Key Features
 

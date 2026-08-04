@@ -43,7 +43,7 @@ The system combines Artificial Intelligence, Embedded Systems, Computer Vision, 
 | Controller | NodeMCU ESP8266 |
 | Motor Driver | L298N |
 | Supported Devices | Desktop & Mobile |
-| Programming Languages | Python, C++, JavaScript |
+| Programming Languages | Python, C++, C, JavaScript |
 
 # 📑 Table of Contents
 

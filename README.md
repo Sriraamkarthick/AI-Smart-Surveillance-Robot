@@ -313,6 +313,10 @@ Artificial Intelligence • Computer Vision • Embedded Systems • IoT • Rob
 
 Kongu Engineering College
 
+🔗 LinkedIn: www.linkedin.com/in/sriraamkarthick-selvam-a07538304
+
+📧 Email: sriraamselvam8@gmail.com
+
 ---
 
 ## ⭐ Support

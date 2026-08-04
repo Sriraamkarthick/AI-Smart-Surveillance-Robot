@@ -5,10 +5,12 @@
 # 🤖 AI-Powered Smart Surveillance Robot
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
-![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black?logo=flask)
 ![YOLOv8](https://img.shields.io/badge/YOLOv8-Object%20Detection-success)
-![ESP32-CAM](https://img.shields.io/badge/ESP32--CAM-IoT-orange)
 ![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-red?logo=opencv)
+![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black?logo=flask)
+![C++](https://img.shields.io/badge/C%2B%2B-Programming-blue?logo=cplusplus)
+![C](https://img.shields.io/badge/C-Programming-A8B9CC?logo=c)
+![ESP32-CAM](https://img.shields.io/badge/ESP32--CAM-IoT-orange)
 ![MQTT](https://img.shields.io/badge/MQTT-IoT-purple)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)

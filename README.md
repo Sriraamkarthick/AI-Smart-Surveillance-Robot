@@ -102,6 +102,8 @@ The system combines Artificial Intelligence, Embedded Systems, Computer Vision, 
 - JavaScript
 - MQTT
 - Arduino IDE
+- C++
+- C
 
 ---
 

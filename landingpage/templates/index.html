@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Robot Control and Live Feed</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Robot Control and Live Feed</h1>
+    <div id="mainContainer">
+        <div id="videoAndControlsContainer">
+            <div id="videoContainer">
+                <div>
+                    <img id="videoStream" src="{{ url_for('video_feed') }}" width="640" height="480" alt="Live Video Feed">
+                </div>
+                <button id="capture-image" class="capture-button" onclick="captureImage()">Capture Image</button>
+            </div>
+            <div class="control-buttons">
+                <div class="remote-container">
+                    <button id="forward-left" class="remote-button" onclick="sendCommand('G')">Forward Left</button>
+                    <button id="forward" class="remote-button" onclick="sendCommand('F')">Forward</button>
+                    <button id="forward-right" class="remote-button" onclick="sendCommand('I')">Forward Right</button>
+                    <button id="left" class="remote-button" onclick="sendCommand('L')">Left</button>
+                    <button id="stop" class="remote-button stop-button" onclick="sendCommand('S')">Stop</button>
+                    <button id="right" class="remote-button" onclick="sendCommand('R')">Right</button>
+                    <button id="backward-left" class="remote-button" onclick="sendCommand('H')">Backward Left</button>
+                    <button id="backward" class="remote-button" onclick="sendCommand('B')">Backward</button>
+                    <button id="backward-right" class="remote-button" onclick="sendCommand('J')">Backward Right</button>
+                </div>
+                <button id="toggle-light" class="light-button" onclick="sendCommand('LIGHT:TOGGLE')">Toggle Light</button>
+                <input type="range" min="0" max="255" value="150" class="slider" id="speedSlider" step="5" onchange="updateSpeed(this.value)">
+                <p>Speed: <span id="speedValue">150</span></p>
+            </div>
+        </div>
+        <div id="sensorContainer">
+            <div class="gauge-container">
+                <canvas id="temperatureGauge"></canvas>
+                <p>Temperature: <span id="temperatureValue">0</span>°C</p>
+            </div>
+            <div class="gauge-container">
+                <canvas id="humidityGauge"></canvas>
+                <p>Humidity: <span id="humidityValue">0</span>%</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const AIO_KEY = "YOUR_ADAFRUIT_IO_KEY";
+
+        function sendCommand(command) {
+            fetch(`https://io.adafruit.com/api/v2/nandha_kishore_2005/feeds/command/data`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-AIO-Key': AIO_KEY
+                },
+                body: JSON.stringify({ "value": command })
+            });
+        }
+
+        function updateSpeed(value) {
+            document.getElementById('speedValue').innerText = value;
+            sendCommand('SPEED:' + value);
+        }
+
+        function captureImage() {
+            fetch('/capture_image', { method: 'POST' })
+                .then(response => response.blob())
+                .then(blob => {
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.style.display = 'none';
+                    a.href = url;
+                    a.download = 'captured_image.jpg';
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                })
+                .catch(error => console.error('Error capturing image:', error));
+        }
+
+        // Initialize gauges
+        let temperatureGauge = new Chart(document.getElementById('temperatureGauge'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Temperature'],
+                datasets: [{
+                    data: [0, 100],  // Starting with 0% filled
+                    backgroundColor: ['#ff6384', '#ddd'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                circumference: Math.PI,
+                rotation: Math.PI,
+                cutout: '75%',
+                plugins: {
+                    tooltip: { enabled: false },
+                    legend: { display: false }
+                }
+            }
+        });
+
+        let humidityGauge = new Chart(document.getElementById('humidityGauge'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Humidity'],
+                datasets: [{
+                    data: [0, 100],  // Starting with 0% filled
+                    backgroundColor: ['#36a2eb', '#ddd'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                circumference: Math.PI,
+                rotation: Math.PI,
+                cutout: '75%',
+                plugins: {
+                    tooltip: { enabled: false },
+                    legend: { display: false }
+                }
+            }
+        });
+
+        function updateGauge(gauge, value) {
+            gauge.data.datasets[0].data[0] = value;
+            gauge.data.datasets[0].data[1] = 100 - value;
+            gauge.update();
+        }
+
+        function fetchSensorData() {
+            fetch(`https://io.adafruit.com/api/v2/nandha_kishore_2005/feeds/temperature/data/last`, {
+                headers: { 'X-AIO-Key': AIO_KEY }
+            })
+            .then(response => response.json())
+            .then(data => {
+                const temperature = parseFloat(data.value);
+                document.getElementById('temperatureValue').innerText = temperature;
+                updateGauge(temperatureGauge, temperature);
+            });
+
+            fetch(`https://io.adafruit.com/api/v2/nandha_kishore_2005/feeds/humidity/data/last`, {
+                headers: { 'X-AIO-Key': AIO_KEY }
+            })
+            .then(response => response.json())
+            .then(data => {
+                const humidity = parseFloat(data.value);
+                document.getElementById('humidityValue').innerText = humidity;
+                updateGauge(humidityGauge, humidity);
+            });
+        }
+
+        setInterval(fetchSensorData, 5000);  // Fetch sensor data every 5 seconds
+    </script>
+</body>
+</html>

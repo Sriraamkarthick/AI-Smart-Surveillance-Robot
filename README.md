@@ -196,19 +196,66 @@ AI-Smart-Surveillance-Robot
 
 ---
 
-# ⚙ Installation
+# ⚙️ Installation
+
+Follow these steps to set up the project on your local machine.
+
+### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/Sriraamkarthick/AI-Smart-Surveillance-Robot.git
-
-cd AI-Smart-Surveillance-Robot
-
-pip install -r requirements.txt
-
-python flask_app.py
 ```
 
----
+### 2️⃣ Navigate to the Project Folder
+
+```bash
+cd AI-Smart-Surveillance-Robot
+```
+
+### 3️⃣ Install Python Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4️⃣ Download the YOLOv8 Model
+
+Download the **YOLOv8n** model and place it inside:
+
+```text
+landingpage/yolo-Weights/
+```
+
+### 5️⃣ Configure the ESP32-CAM & NodeMCU
+
+- Upload the ESP32-CAM firmware.
+- Upload the NodeMCU robot control code.
+- Update your Wi-Fi credentials and MQTT/Adafruit IO configuration.
+
+### 6️⃣ Run the Flask Application
+
+```bash
+python landingpage/flask_app.py
+```
+
+### 7️⃣ Open the Dashboard
+
+Open your browser and visit:
+
+```text
+http://127.0.0.1:5000
+```
+
+# ▶️ Usage
+
+1. Power on the ESP32-CAM and NodeMCU.
+2. Ensure both devices are connected to the same Wi-Fi network.
+3. Start the Flask application.
+4. Open the web dashboard in your browser.
+5. View the live video stream.
+6. Control the robot using the on-screen controls.
+7. Perform real-time object detection using YOLOv8.
+8. Capture images directly from the dashboard.
 
 # 📈 Results
 

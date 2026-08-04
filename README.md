@@ -125,25 +125,46 @@ The web application is fully responsive and can be accessed using:
 
 # 📷 Project Gallery
 
-## Robot
+## 🤖 Robot Prototype
 
-(Add your robot images here)
+| Front View | Top View |
+|------------|----------|
+| ![](screenshots/robot-front.png) | ![](screenshots/robot-top.png) |
 
-## Web Dashboard
-
-(Add dashboard screenshots here)
-
-## Object Detection
-
-(Add YOLO detection screenshots here)
+| Side View | Bottom View |
+|------------|-------------|
+| ![](screenshots/robot-side-1.jpeg) | ![](screenshots/robot-bottom.jpeg) |
 
 ---
+
+## 📱 Responsive Web Dashboard
+
+| Desktop Dashboard | Mobile Dashboard |
+|-------------------|------------------|
+| ![](screenshots/dashboard-pc.png) | ![](screenshots/dashboard-mobile.png) |
+
+---
+
+## 🎯 AI Object Detection
+
+![](screenshots/object-detection.png)
+
+---
+
+## 🚗 Robot Demonstration
+
+![](screenshots/robot-demo.jpeg)
 
 # 🎥 Demonstration
 
-Project demonstration videos are available inside the **demo** folder.
+The project demonstration videos are available in the **demo** folder.
 
----
+### Available demonstrations
+
+- 📹 Robot Control using Mobile Dashboard
+- 📹 Robot Control using Desktop Dashboard
+- 🎥 Live Video Streaming
+- 🤖 Object Detection Demo
 
 # 📂 Project Structure
 
@@ -187,6 +208,26 @@ python flask_app.py
 - Captured images directly from the dashboard.
 
 ---
+
+# 💡 Challenges & Learnings
+
+During the development of this project, several practical challenges were addressed:
+
+- Integrating AI-based object detection with embedded hardware.
+- Streaming live video from ESP32-CAM with low latency.
+- Designing a responsive dashboard for both desktop and mobile devices.
+- Establishing reliable MQTT communication for real-time robot control.
+- Coordinating Flask, OpenCV, and embedded systems into a single application.
+
+### Key Learnings
+
+- Computer Vision using YOLOv8
+- Flask Web Application Development
+- ESP32-CAM Integration
+- MQTT Communication
+- IoT System Design
+- Responsive Web Design
+- Embedded Systems Programming
 
 # 🚀 Future Enhancements
 

@@ -15,18 +15,6 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-<p align="center">
-
-![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
-![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black?logo=flask)
-![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-green)
-![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-red?logo=opencv)
-![ESP32-CAM](https://img.shields.io/badge/ESP32--CAM-IoT-orange)
-![MQTT](https://img.shields.io/badge/MQTT-Protocol-purple)
-![Arduino](https://img.shields.io/badge/Arduino-IDE-00979D?logo=arduino)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-
-</p>
 
 > **An AI-powered surveillance robot capable of real-time object detection, live video streaming, remote control, and responsive web monitoring using ESP32-CAM, Flask, and YOLOv8.**
 
